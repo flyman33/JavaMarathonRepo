@@ -3,18 +3,19 @@ package day7;
 public class Task2 {
 
     public static void main(String[] args) {
-        Player player1 = new Player(90);
-        Player player2 = new Player(95);
-        Player player3 = new Player(97);
-        Player player4 = new Player(90);
-        Player player5 = new Player(95);
-        Player player6 = new Player(97);
-        Player player7 = new Player(97);
-        Player player8 = new Player(97);
+        Player player1 = new Player();
+        Player player2 = new Player();
+        Player player3 = new Player();
+        Player player4 = new Player();
+        Player player5 = new Player();
+        Player player6 = new Player();
+        Player player7 = new Player();
+        Player player8 = new Player();
 
         Player.info();
 
-        for(int i = 0; i < 95; i++) {
+        int player1Stamina = player1.getStamina();
+        for(int i = 0; i < player1Stamina; i++) {
             player1.run();
         }
 

@@ -22,7 +22,7 @@ public class Plane {
     }
 
     void fillUp(int fuel) {
-        capacity = fuel;
+        capacity += fuel;
     }
 
     public String getProducer() {
@@ -67,7 +67,8 @@ public class Plane {
 
     public static void longerPlane(Plane planeOne, Plane planeTwo) {
         if(planeOne.length > planeTwo.length) System.out.println("Длина первого самолет больше второго");
-        else System.out.println("Длина второго самолета больше первого");
+        else if(planeOne.length < planeTwo.length) System.out.println("Длина второго самолета больше первого");
+        else System.out.println("Длина первого и второго самолета равные");
     }
 
 }

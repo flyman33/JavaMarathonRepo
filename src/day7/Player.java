@@ -1,8 +1,13 @@
 package day7;
 
+import java.util.Random;
+
 public class Player {
 
     private int stamina;
+    public static final int MAX_STAMINA = 100;
+    public static final int MIN_STAMINA = 0;
+    public static int countPlayers = 0;
 
     public int getStamina() {
         return stamina;
@@ -12,17 +17,10 @@ public class Player {
         this.stamina = stamina;
     }
 
-    public static final int MAX_STAMINA = 100;
-    public static final int MIN_STAMINA = 0;
-    public static int countPlayers = 0;
+    public Player() {
+        Random random = new Random();
 
-    public Player(int stamina) {
-        if(stamina < 90 || stamina > MAX_STAMINA) {
-            System.out.println("Введено некорректное значение. Введите значение от 90 до 100.");
-            return;
-        }
-
-        this.stamina = stamina;
+        this.stamina = 90 + random.nextInt(100 - 90 + 1);
 
         if(countPlayers < 6) {
             countPlayers++;
