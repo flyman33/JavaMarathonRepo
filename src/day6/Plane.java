@@ -22,7 +22,7 @@ public class Plane {
     }
 
     void fillUp(int fuel) {
-        capacity = fuel;
+        capacity += fuel;
     }
 
     public String getProducer() {
