@@ -22,12 +22,10 @@ public class Task1 {
             String[] numbersString = scanner.nextLine().split(" ");
             scanner.close();
 
-            int[] numbers = new int[numbersString.length];
             int sum = 0;
 
-            for(int i = 0; i < numbersString.length; i++) {
-                numbers[i] = Integer.parseInt(numbersString[i]);
-                sum += numbers[i];
+            for(String s : numbersString) {
+                sum += Integer.parseInt(s);
             }
 
             if(numbersString.length != 10) {
